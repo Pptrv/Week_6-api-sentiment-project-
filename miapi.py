@@ -30,12 +30,12 @@ def line_order_character(line):
     star_wars = get.order_character_dialogue(line)
     return json.dumps(star_wars)
 
-@app.route("/polarity/)
+@app.route("/polarity/")
 def polarityCharacters():
     star_wars_pol = get.sentimentAnalysisPolarity(sentence)
     return json.dumps(star_wars_pol)
 
-@app.route("/compound/)
+@app.route("/compound/")
 def polarityCharacters():
     star_wars_com = get.sentimentAnalysisCompound(sentence)
     return json.dumps(star_wars_pol)
