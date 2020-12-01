@@ -25,13 +25,23 @@ def frase_character(character):
     star_wars = get.dialogue_character(character)
     return json.dumps(star_wars)
 
-@app.route("/line_order/<character>")
-def line_order_character(character):
-    star_wars = get.order_character_dialogue(character)
+@app.route("/line_order/<line>")
+def line_order_character(line):
+    star_wars = get.order_character_dialogue(line)
     return json.dumps(star_wars)
 
+@app.route("/polarity/)
+def polarityCharacters():
+    star_wars_pol = get.sentimentAnalysisPolarity(sentence)
+    return json.dumps(star_wars_pol)
 
-@app.route("/new_dialogue", methods = ["POST"])
+@app.route("/compound/)
+def polarityCharacters():
+    star_wars_com = get.sentimentAnalysisCompound(sentence)
+    return json.dumps(star_wars_pol)
+
+
+@app.route("/new_dialogue",methods=["POST"])
 def insert_dialogue():
     line_order = request.form.get("Line_order")
     character = request.form.get("Character")
@@ -41,4 +51,4 @@ def insert_dialogue():
 
 
 
-    app.run(debug=True)
+app.run(debug=True)

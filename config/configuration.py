@@ -11,4 +11,4 @@ if not (DBURL):
 
 client = MongoClient(DBURL)
 db = client.get_database()
-collection = db("star_wars")
+collection = db["star_wars"]

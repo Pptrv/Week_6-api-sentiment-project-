@@ -32,14 +32,15 @@ Endpoint
 - /dialogue/<character>
 
 example:
-vader_dialogue = 
+vader_dialogue = dialogue = requests.get(url_query_dialogue = "http://localhost:5000/dialogue/" + person = "VADER")
 
 
 
-#### Reading a characters line_orderEndpoint
+#### Reading a characters line_order
 
 Endpoint
 - /line_order/<character>
 
 example:
+line_order = requests.get(url_query_line_order = "http://localhost:5000/line_order/" + person = = "VADER")
 
